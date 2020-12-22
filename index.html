@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3Scools Online Web Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dfd0da9182.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Header Starting -->
+    <header>
+        <div id="top_bar">
+            <div id="top_bar_left">
+                <h1>w3schools<span>.com</span></h1>
+            </div>
+            <div id="top_bar_right">
+                <h5 id="main_heading">THE WORLD'S LARGEST WEB DEVELOPER SITE</h5>
+                <a href="#" class="login">LOG IN</a>
+            </div>
+        </div>
+        <nav>
+            <div class="left_links">
+                <a type="button" class="nav_toggle_links" onclick="toggle_tutorial(this)">Tutorials <i
+                        class="fas fa-caret-down" id="toggle_icon"></i></a>
+                <a type="button" class="nav_toggle_links" onclick="toggle_reference(this)">References <i
+                        class="fas fa-caret-down" id="toggle_icon"></i></a>
+                <a type="button" class="nav_toggle_links" onclick="toggle_example(this)">Examples <i
+                        class="fas fa-caret-down" id="toggle_icon"></i></a>
+                <a type="button" class="nav_toggle_links hide_992" onclick="toggle_exercise(this)">Exercises <i
+                        class="fas fa-caret-down" id="toggle_icon"></i></a>
+                <a href="" class="nav_toggle_links hide_992">Certificates</a>
+                <!-- <i class="fas fa-sort-up"></i> -->
+            </div>
+            <div class="right_links">
+                <a href=""><i class="fas fa-star-half-alt"></i></a>
+                <a href=""><i class="fas fa-globe-americas"></i></a>
+                <a href=""><i class="fas fa-search"></i></a>
+            </div>
+        </nav>
+    </header>
+    <div id="tutorial_container" class="container_details">
+        <button type="button" class="close_container" onclick="close_container(this)">x</button>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">HTML and CSS</h3>
+                <a class="container_links" href="/html/default.asp">Learn HTML</a>
+                <a class="container_links" href="/css/default.asp">Learn CSS</a>
+                <a class="container_links" href="/bootstrap/bootstrap_ver.asp">Learn Bootstrap</a>
+                <a class="container_links" href="/w3css/default.asp">Learn W3.CSS</a>
+                <a class="container_links" href="/colors/default.asp">Learn Colors</a>
+                <a class="container_links" href="/icons/default.asp">Learn Icons</a>
+                <a class="container_links" href="/graphics/default.asp">Learn Graphics</a>
+                <a class="container_links" href="/graphics/svg_intro.asp">Learn SVG</a>
+                <a class="container_links" href="/graphics/canvas_intro.asp">Learn Canvas</a>
+                <a class="container_links" href="/howto/default.asp">Learn How To</a>
+                <a class="container_links" href="/sass/default.php">Learn Sass</a>
+                <div class="d-lg-none">
+                    <h3 class="container_heading">XML Tutorials</h3>
+                    <a class="container_links" href="/xml/default.asp">Learn XML</a>
+                    <a class="container_links" href="/xml/ajax_intro.asp">Learn XML AJAX</a>
+                    <a class="container_links" href="/xml/dom_intro.asp">Learn XML DOM</a>
+                    <a class="container_links" href="/xml/xml_dtd_intro.asp">Learn XML DTD</a>
+                    <a class="container_links" href="/xml/schema_intro.asp">Learn XML Schema</a>
+                    <a class="container_links" href="/xml/xsl_intro.asp">Learn XSLT</a>
+                    <a class="container_links" href="/xml/xpath_intro.asp">Learn XPath</a>
+                    <a class="container_links" href="/xml/xquery_intro.asp">Learn XQuery</a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">JavaScript</h3>
+                <a class="container_links" href="/js/default.asp">Learn JavaScript</a>
+                <a class="container_links" href="/jquery/default.asp">Learn jQuery</a>
+                <a class="container_links" href="/react/default.asp">Learn React</a>
+                <a class="container_links" href="/angular/default.asp">Learn AngularJS</a>
+                <a class="container_links" href="/js/js_json_intro.asp">Learn JSON</a>
+                <a class="container_links" href="/js/js_ajax_intro.asp">Learn AJAX</a>
+                <a class="container_links" href="/appml/default.asp">Learn AppML</a>
+                <a class="container_links" href="/w3js/default.asp">Learn W3.JS</a>
+                <h3 class="container_heading">Programming</h3>
+                <a class="container_links" href="/python/default.asp">Learn Python</a>
+                <a class="container_links" href="/java/default.asp">Learn Java</a>
+                <a class="container_links" href="/cpp/default.asp">Learn C++</a>
+                <a class="container_links" href="/cs/default.asp">Learn C#</a>
+                <a class="container_links" href="/python/python_ml_getting_started.asp">Learn Machine Learning</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">Server Side</h3>
+                <a class="container_links" href="/sql/default.asp">Learn SQL</a>
+                <a class="container_links" href="/php/default.asp">Learn PHP</a>
+                <a class="container_links" href="/asp/default.asp">Learn ASP</a>
+                <a class="container_links" href="/nodejs/default.asp">Learn Node.js</a>
+                <a class="container_links" href="/nodejs/nodejs_raspberrypi.asp">Learn Raspberry Pi</a>
+                <h3 class="container_heading">Web Building</h3>
+                <a class="container_links" href="/w3css/w3css_templates.asp">Web Templates</a>
+                <a class="container_links" href="/browsers/default.asp">Web Statistics</a>
+                <a class="container_links" href="/cert/default.asp">Web Certificates</a>
+                <a class="container_links" href="/tryit/default.asp">Web Editor</a>
+                <a class="container_links" href="/whatis/default.asp">Web Development</a>
+                <a class="container_links" href="/typingspeed/default.asp">Test Your Typing Speed</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-lg-block d-md-none d-sm-none d-none">
+                <h3 class="container_heading">XML Tutorials</h3>
+                <a class="container_links" href="/xml/default.asp">Learn XML</a>
+                <a class="container_links" href="/xml/ajax_intro.asp">Learn XML AJAX</a>
+                <a class="container_links" href="/xml/dom_intro.asp">Learn XML DOM</a>
+                <a class="container_links" href="/xml/xml_dtd_intro.asp">Learn XML DTD</a>
+                <a class="container_links" href="/xml/schema_intro.asp">Learn XML Schema</a>
+                <a class="container_links" href="/xml/xsl_intro.asp">Learn XSLT</a>
+                <a class="container_links" href="/xml/xpath_intro.asp">Learn XPath</a>
+                <a class="container_links" href="/xml/xquery_intro.asp">Learn XQuery</a>
+            </div>
+        </div>
+    </div>
+    <div id="reference_container" class="container_details">
+        <button type="button" class="close_container" onclick="close_container(this)">x</button>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">HTML</h3>
+                <a class="container_links" href="/tags/default.asp">HTML Tag Reference</a>
+                <a class="container_links" href="/tags/ref_html_browsersupport.asp">HTML Browser Support</a>
+                <a class="container_links" href="/tags/ref_eventattributes.asp">HTML Event Reference</a>
+                <a class="container_links" href="/colors/default.asp">HTML Color Reference</a>
+                <a class="container_links" href="/tags/ref_attributes.asp">HTML Attribute Reference</a>
+                <a class="container_links" href="/tags/ref_canvas.asp">HTML Canvas Reference</a>
+                <a class="container_links" href="/graphics/svg_reference.asp">HTML SVG Reference</a>
+                <a class="container_links" href="/graphics/google_maps_reference.asp">Google Maps Reference</a>
+                <h3 class="container_heading">CSS</h3>
+                <a class="container_links" href="/cssref/default.asp">CSS Reference</a>
+                <a class="container_links" href="/cssref/css3_browsersupport.asp">CSS Browser Support</a>
+                <a class="container_links" href="/cssref/css_selectors.asp">CSS Selector Reference</a>
+                <a class="container_links" href="/bootstrap/bootstrap_ref_all_classes.asp">Bootstrap 3
+                    Reference</a>
+                <a class="container_links" href="/bootstrap4/bootstrap_ref_all_classes.asp">Bootstrap 4
+                    Reference</a>
+                <a class="container_links" href="/w3css/w3css_references.asp">W3.CSS Reference</a>
+                <a class="container_links" href="/icons/icons_reference.asp">Icon Reference</a>
+                <a class="container_links" href="/sass/sass_functions_string.php">Sass Reference</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">JavaScript</h3>
+                <a class="container_links" href="/jsref/default.asp">JavaScript Reference</a>
+                <a class="container_links" href="/jsref/default.asp">HTML DOM Reference</a>
+                <a class="container_links" href="/jquery/jquery_ref_overview.asp">jQuery Reference</a>
+                <a class="container_links" href="/angular/angular_ref_directives.asp">AngularJS Reference</a>
+                <a class="container_links" href="/appml/appml_reference.asp">AppML Reference</a>
+                <a class="container_links" href="/w3js/w3js_references.asp">W3.JS Reference</a>
+
+                <h3 class="container_heading">Programming</h3>
+                <a class="container_links" href="/python/python_reference.asp">Python Reference</a>
+                <a class="container_links" href="/java/java_ref_keywords.asp">Java Reference</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">Server Side</h3>
+                <a class="container_links" href="/sql/sql_ref_keywords.asp">SQL Reference</a>
+                <a class="container_links" href="/php/php_ref_overview.asp">PHP Reference</a>
+                <a class="container_links" href="/asp/asp_ref_response.asp">ASP Reference</a>
+                <h3 class="container_heading">XML</h3>
+                <a class="container_links" href="/xml/dom_nodetype.asp">XML DOM Reference</a>
+                <a class="container_links" href="/xml/dom_http.asp">XML Http Reference</a>
+                <a class="container_links" href="/xml/xsl_elementref.asp">XSLT Reference</a>
+                <a class="container_links" href="/xml/schema_elements_ref.asp">XML Schema Reference</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">Character Sets</h3>
+                <a class="container_links" href="/charsets/default.asp">HTML Character Sets</a>
+                <a class="container_links" href="/charsets/ref_html_ascii.asp">HTML ASCII</a>
+                <a class="container_links" href="/charsets/ref_html_ansi.asp">HTML ANSI</a>
+                <a class="container_links" href="/charsets/ref_html_ansi.asp">HTML Windows-1252</a>
+                <a class="container_links" href="/charsets/ref_html_8859.asp">HTML ISO-8859-1</a>
+                <a class="container_links" href="/charsets/ref_html_symbols.asp">HTML Symbols</a>
+                <a class="container_links" href="/charsets/ref_html_utf8.asp">HTML UTF-8</a>
+            </div>
+        </div>
+    </div>
+    <div id="example_container" class="container_details">
+        <button type="button" class="close_container" onclick="close_container(this)">x</button>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">HTML and CSS</h3>
+                <a class="container_links" href="/html/html_examples.asp">HTML Examples</a>
+                <a class="container_links" href="/css/css_examples.asp">CSS Examples</a>
+                <a class="container_links" href="/w3css/w3css_examples.asp">W3.CSS Examples</a>
+                <a class="container_links" href="/bootstrap/bootstrap_examples.asp">Bootstrap Examples</a>
+                <a class="container_links" href="/howto/default.asp">How To Examples</a>
+                <a class="container_links" href="/graphics/svg_examples.asp">SVG Examples</a>
+                <a class="container_links" href="/w3css/w3css_templates.asp">Web Templates</a>
+                <div class="w3-hide-large w3-hide-small">
+                    <h3 class="container_heading">Quizzes</h3>
+                    <a class="container_links" href="/html/html_quiz.asp">HTML Quiz</a>
+                    <a class="container_links" href="/css/css_quiz.asp">CSS Quiz</a>
+                    <a class="container_links" href="/js/js_quiz.asp">JavaScript Quiz</a>
+                    <a class="container_links" href="/sql/sql_quiz.asp">SQL Quiz</a>
+                    <a class="container_links" href="/php/php_quiz.asp">PHP Quiz</a>
+                    <a class="container_links" href="/python/python_quiz.asp">Python Quiz</a>
+                    <a class="container_links" href="/jquery/jquery_quiz.asp">jQuery Quiz</a>
+                    <a class="container_links" href="/bootstrap/bootstrap_quiz.asp">Bootstrap
+                        Quiz</a>
+                    <a class="container_links" href="/java/java_quiz.asp">Java Quiz</a>
+                    <a class="container_links" href="/cpp/cpp_quiz.asp">C++ Quiz</a>
+                    <a class="container_links" href="/cs/cs_quiz.asp">C# Quiz</a>
+                    <a class="container_links" href="/xml/xml_quiz.asp">XML Quiz</a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">JavaScript</h3>
+                <a class="container_links" href="/js/js_examples.asp">JavaScript Examples</a>
+                <a class="container_links" href="/js/js_dom_examples.asp">HTML DOM Examples</a>
+                <a class="container_links" href="/jquery/jquery_examples.asp">jQuery Examples</a>
+                <a class="container_links" href="/angular/angular_examples.asp">AngularJS
+                    Examples</a>
+                <a class="container_links" href="/js/js_ajax_examples.asp">AJAX Examples</a>
+                <a class="container_links" href="/w3js/w3js_examples.asp">W3.JS Examples</a>
+                <h3 class="container_heading">Programming</h3>
+                <a class="container_links" href="/python/python_examples.asp">Python Examples</a>
+                <a class="container_links" href="/java/java_examples.asp">Java Examples</a>
+                <a class="container_links" href="/cpp/cpp_examples.asp">C++ Examples</a>
+                <a class="container_links" href="/cs/cs_examples.asp">C# Examples</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">Server Side</h3>
+                <a class="container_links" href="/sql/sql_examples.asp">SQL Examples</a>
+                <a class="container_links" href="/php/php_examples.asp">PHP Examples</a>
+                <a class="container_links" href="/asp/asp_examples.asp">ASP Examples</a>
+                <h3 class="container_heading">XML</h3>
+                <a class="container_links" href="/xml/xml_examples.asp">XML Examples</a>
+                <a class="container_links" href="/xml/xsl_examples.asp">XSLT Examples</a>
+                <a class="container_links" href="/xml/xpath_examples.asp">XPath Examples</a>
+                <a class="container_links" href="/xml/schema_example.asp">XML Schema Examples</a>
+                <a class="container_links" href="/xml/ajax_examples.asp">AJAX Examples</a>
+                <a class="container_links" href="/graphics/svg_examples.asp">SVG Examples</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <h3 class="container_heading">Quizzes</h3>
+                <a class="container_links" href="/html/html_quiz.asp">HTML Quiz</a>
+                <a class="container_links" href="/css/css_quiz.asp">CSS Quiz</a>
+                <a class="container_links" href="/js/js_quiz.asp">JavaScript Quiz</a>
+                <a class="container_links" href="/sql/sql_quiz.asp">SQL Quiz</a>
+                <a class="container_links" href="/php/php_quiz.asp">PHP Quiz</a>
+                <a class="container_links" href="/python/python_quiz.asp">Python Quiz</a>
+                <a class="container_links" href="/jquery/jquery_quiz.asp">jQuery Quiz</a>
+                <a class="container_links" href="/bootstrap/bootstrap_quiz.asp">Bootstrap Quiz</a>
+                <a class="container_links" href="/java/java_quiz.asp">Java Quiz</a>
+                <a class="container_links" href="/cpp/cpp_quiz.asp">C++ Quiz</a>
+                <a class="container_links" href="/cs/cs_quiz.asp">C# Quiz</a>
+                <a class="container_links" href="/xml/xml_quiz.asp">XML Quiz</a>
+            </div>
+        </div>
+    </div>
+    <div id="exercise_container" class="container_details">
+        <button type="button" class="close_container" onclick="close_container(this)">x</button>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <h3 class="container_heading">Exercises</h3>
+                <a class="container_links" href="/html/html_exercises.asp">HTML Exercises</a>
+                <a class="container_links" href="/css/css_exercises.asp">CSS Exercises</a>
+                <a class="container_links" href="/js/js_exercises.asp">JavaScript Exercises</a>
+                <a class="container_links" href="/sql/sql_exercises.asp">SQL Exercises</a>
+                <a class="container_links" href="/php/php_exercises.asp">PHP Exercises</a>
+                <a class="container_links" href="/python/python_exercises.asp">Python Exercises</a>
+                <a class="container_links" href="/jquery/jquery_exercises.asp">jQuery Exercises</a>
+                <a class="container_links" href="/java/java_exercises.asp">Java Exercises</a>
+                <a class="container_links" href="/bootstrap/bootstrap_exercises.asp">Bootstrap Exercises</a>
+                <a class="container_links" href="/cpp/cpp_exercises.asp">C++ Exercises</a>
+                <a class="container_links" href="/cs/cs_exercises.asp">C# Exercises</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <h3 class="container_heading">Quizzes</h3>
+                <a class="container_links" href="/html/html_quiz.asp">HTML Quiz</a>
+                <a class="container_links" href="/css/css_quiz.asp">CSS Quiz</a>
+                <a class="container_links" href="/js/js_quiz.asp">JavaScript Quiz</a>
+                <a class="container_links" href="/sql/sql_quiz.asp">SQL Quiz</a>
+                <a class="container_links" href="/php/php_quiz.asp">PHP Quiz</a>
+                <a class="container_links" href="/python/python_quiz.asp">Python Quiz</a>
+                <a class="container_links" href="/jquery/jquery_quiz.asp">jQuery Quiz</a>
+                <a class="container_links" href="/bootstrap/bootstrap_quiz.asp">Bootstrap Quiz</a>
+                <a class="container_links" href="/java/java_quiz.asp">Java Quiz</a>
+                <a class="container_links" href="/cpp/cpp_quiz.asp">C++ Quiz</a>
+                <a class="container_links" href="/cs/cs_quiz.asp">C# Quiz</a>
+                <a class="container_links" href="/xml/xml_quiz.asp">XML Quiz</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <h3 class="container_heading">Certificates</h3>
+                <a class="container_links" href="/cert/cert_html_new.asp">HTML Certificate</a>
+                <a class="container_links" href="/cert/cert_css.asp">CSS Certificate</a>
+                <a class="container_links" href="/cert/cert_javascript.asp">JavaScript Certificate</a>
+                <a class="container_links" href="/cert/cert_sql.asp">SQL Certificate</a>
+                <a class="container_links" href="/cert/cert_php.asp">PHP Certificate</a>
+                <a class="container_links" href="/cert/cert_python.asp">Python Certificate</a>
+                <a class="container_links" href="/cert/cert_bootstrap.asp">Bootstrap Certificate</a>
+                <a class="container_links" href="/cert/cert_jquery.asp">jQuery Certificate</a>
+                <a class="container_links" href="/cert/cert_xml.asp">XML Certificate</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Ending -->
+
+
+    <div id="main_section">
+        <!-- Sidebar Starting -->
+        <div id="sidebar">
+            <h4 class="sidebar_heading">HTML and CSS</h4>
+            <a class="sidebar_link" href="/html/default.asp">Learn HTML</a>
+            <a class="sidebar_link" href="/css/default.asp">Learn CSS</a>
+            <a class="sidebar_link" href="/bootstrap/bootstrap_ver.asp">Learn Bootstrap</a>
+            <a class="sidebar_link" href="/w3css/default.asp">Learn W3.CSS</a>
+            <a class="sidebar_link" href="/colors/default.asp">Learn Colors</a>
+            <a class="sidebar_link" href="/icons/default.asp">Learn Icons</a>
+            <a class="sidebar_link" href="/graphics/default.asp">Learn Graphics</a>
+            <a class="sidebar_link" href="/howto/default.asp">Learn How To</a>
+            <a class="sidebar_link" href="/sass/default.php">Learn Sass</a>
+            <h4 class="sidebar_heading">JavaScript</h4>
+            <a class="sidebar_link" href="/js/default.asp">Learn JavaScript</a>
+            <a class="sidebar_link" href="/jquery/default.asp">Learn jQuery</a>
+            <a class="sidebar_link" href="/react/default.asp">Learn React</a>
+            <a class="sidebar_link" href="/angular/default.asp">Learn AngularJS</a>
+            <a class="sidebar_link" href="/js/js_json_intro.asp">Learn JSON</a>
+            <a class="sidebar_link" href="/js/js_ajax_intro.asp">Learn AJAX</a>
+            <a class="sidebar_link" href="/appml/default.asp">Learn AppML</a>
+            <a class="sidebar_link" href="/w3js/default.asp">Learn W3.JS</a>
+            <h4 class="sidebar_heading">Server Side</h4>
+            <a class="sidebar_link" href="/sql/default.asp">Learn SQL</a>
+            <a class="sidebar_link" href="/php/default.asp">Learn PHP</a>
+            <a class="sidebar_link" href="/asp/default.asp">Learn ASP</a>
+            <a class="sidebar_link" href="/nodejs/default.asp">Learn Node.js</a>
+            <a class="sidebar_link" href="/nodejs/nodejs_raspberrypi.asp">Learn Raspberry Pi</a>
+            <h4 class="sidebar_heading">Programming</h4>
+            <a class="sidebar_link" href="/python/default.asp">Learn Python</a>
+            <a class="sidebar_link" href="/java/default.asp">Learn Java</a>
+            <a class="sidebar_link" href="/cpp/default.asp">Learn C++</a>
+            <a class="sidebar_link" href="/cs/default.asp">Learn C#</a>
+            <a class="sidebar_link" href="/python/python_ml_getting_started.asp">Learn Machine Learning</a>
+            <h4 class="sidebar_heading">Web Building</h4>
+            <a class="sidebar_link" href="/w3css/w3css_templates.asp">Web Templates</a>
+            <a class="sidebar_link" href="/browsers/default.asp">Web Statistics</a>
+            <a class="sidebar_link" href="/cert/default.asp">Web Certificates</a>
+            <a class="sidebar_link" href="/tryit/default.asp">Web Editor</a>
+            <a class="sidebar_link" href="/whatis/default.asp">Web Development</a>
+            <a class="sidebar_link" href="/typingspeed/default.asp">Test Your Typing Speed</a>
+            <h4 class="sidebar_heading">XML Tutorials</h4>
+            <a class="sidebar_link" href="/xml/default.asp">Learn XML</a>
+            <a class="sidebar_link" href="/xml/ajax_intro.asp">Learn XML AJAX</a>
+            <a class="sidebar_link" href="/xml/dom_intro.asp">Learn XML DOM</a>
+            <a class="sidebar_link" href="/xml/xml_dtd_intro.asp">Learn XML DTD</a>
+            <a class="sidebar_link" href="/xml/schema_intro.asp">Learn XML Schema</a>
+            <a class="sidebar_link" href="/xml/xsl_intro.asp">Learn XSLT</a>
+            <a class="sidebar_link" href="/xml/xpath_intro.asp">Learn XPath</a>
+            <a class="sidebar_link" href="/xml/xquery_intro.asp">Learn XQuery</a>
+            <h4 class="sidebar_heading">References</h4>
+            <a class="sidebar_link" href="/tags/default.asp">HTML Reference</a>
+            <a class="sidebar_link" href="/cssref/default.asp">CSS Reference</a>
+            <a class="sidebar_link" href="/jsref/default.asp">JS Reference</a>
+            <a class="sidebar_link" href="/sql/sql_ref_keywords.asp">SQL Reference</a>
+            <a class="sidebar_link" href="/php/php_ref_overview.asp">PHP Reference</a>
+            <a class="sidebar_link" href="/jquery/jquery_ref_overview.asp">jQuery Reference</a>
+            <a class="sidebar_link" href="/python/python_reference.asp">Python Reference</a>
+            <a class="sidebar_link" href="/bootstrap/bootstrap_ref_all_classes.asp">Bootstrap 3 Reference</a>
+            <a class="sidebar_link" href="/bootstrap4/bootstrap_ref_all_classes.asp">Bootstrap 4 Reference</a>
+            <a class="sidebar_link" href="/w3css/w3css_references.asp">W3.CSS Reference</a>
+            <a class="sidebar_link" href="/java/java_ref_keywords.asp">Java Reference</a>
+            <a class="sidebar_link" href="/angular/angular_ref_directives.asp">Angular Reference</a>
+            <a class="sidebar_link" href="/sass/sass_functions_string.php">Sass Reference</a>
+            <a class="sidebar_link" href="/charsets/default.asp">UTF-8 Reference</a>
+            <h4 class="sidebar_heading">Exercises</h4>
+            <a class="sidebar_link" href="/html/html_exercises.asp">HTML Exercises</a>
+            <a class="sidebar_link" href="/css/css_exercises.asp">CSS Exercises</a>
+            <a class="sidebar_link" href="/js/js_exercises.asp">JavaScript Exercises</a>
+            <a class="sidebar_link" href="/sql/sql_exercises.asp">SQL Exercises</a>
+            <a class="sidebar_link" href="/php/php_exercises.asp">PHP Exercises</a>
+            <a class="sidebar_link" href="/python/python_exercises.asp">Python Exercises</a>
+            <a class="sidebar_link" href="/java/java_exercises.asp">Java Exercises</a>
+            <a class="sidebar_link" href="/cpp/cpp_exercises.asp">C++ Exercises</a>
+            <a class="sidebar_link" href="/cs/cs_exercises.asp">C# Exercises</a>
+            <a class="sidebar_link" href="/bootstrap/bootstrap_exercises.asp">Bootstrap Exercises</a>
+        </div>
+        <!-- Sidebar Ending -->
+        <div id="content_section">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center left_container">
+                    <h1>HTML</h1>
+                    <p>The language for building web pages</p>
+                    <div class="button_container">
+                        <a href="https://www.w3schools.com/html/default.asp" class="dark_grey_btn code_btn">Learn
+                            Html</a>
+                        <a href="https://www.w3schools.com/tags/default.asp" class="dark_grey_btn code_btn">Html
+                            Reference</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 right_container">
+                    <div class="code_outer_container_grey">
+                        <div class="code_container_heading">
+                            <h3>HTML Example:</h3>
+                        </div>
+                        <div class="code_inner_container">
+                            <code>
+                                <!DOCTYPE html>
+                                &lt;!DOCTYPE html&gt;<br>
+                                &lt;html&gt;<br>
+                                &lt;body&gt;<br>
+                                <br>
+                                &lt;h1&gt;Testing an HTML Syntax Highlighter&lt;/h2&gt;<br>
+                                &lt;p&gt;Hello world!&lt;/p&gt;<br>
+                                &lt;a href="https://www.w3schools.com"&gt;Back to School&lt;/a&gt;<br>
+                                <br>
+                                &lt;/body&gt;<br>
+                                &lt;/html&gt;
+                            </code>
+                        </div>
+                        <a class="green_btn code_btn" type="button"
+                            href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default" target="_blank">
+                            Try it Yourself <i class="fas fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row light_grey_bg">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center left_container order-2">
+                    <h1>CSS</h1>
+                    <p>The language for styling web pages</p>
+                    <div class="button_container">
+                        <a href="https://www.w3schools.com/css/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Learn Css</a>
+                        <a href="https://www.w3schools.com/cssref/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Css Reference</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 right_container">
+                    <div class="code_outer_container">
+                        <div class="code_container_heading">
+                            <h3>CSS Example:</h3>
+                        </div>
+                        <div class="code_inner_container">
+                            <code>
+                                body { 
+                                <br>
+                                background-color: lightblue;
+                                <br>
+                                }
+                                <br>
+                                h1 {
+                                <br>
+                                color: white;
+                                <br>
+                                text-align: center;
+                                <br>
+                                }
+                                <br>
+                                p {
+                                <br>
+                                font-family: verdana;
+                                <br>
+                                font-size: 20px;
+                                <br>
+                                }
+                            </code>
+                        </div>
+                        <a class="green_btn code_btn" type="button"
+                            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_default" target="_blank">
+                            Try it Yourself <i class="fas fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center left_container">
+                    <h1>JavaScript</h1>
+                    <p>The language for programming web pages</p>
+                    <div class="button_container">
+                        <a href="https://www.w3schools.com/js/default.asp" class="dark_grey_btn code_btn">Learn
+                            JavaScript</a>
+                        <a href="https://www.w3schools.com/jsref/default.asp" class="dark_grey_btn code_btn">JavaScript
+                            Reference</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 right_container">
+                    <div class="code_outer_container_grey">
+                        <div class="code_container_heading">
+                            <h3>JavaScript Example:</h3>
+                        </div>
+                        <div class="code_inner_container">
+                            <code>
+                            &lt;button onclick="myFunction()"&gt;Click Me!&lt;/button&gt;
+                            <br><br>
+                            &lt;script&gt;
+                            <br>
+                            function myFunction() {
+                            <br>
+                            var x = document.getElementById("demo");
+                            <br>
+                            x.style.fontSize = "25px";
+                            <br>
+                            x.style.color = "red";
+                            <br>
+                            }
+                            <br>
+                            &lt;/script&gt;
+                            </code>
+                        </div>
+                        <a class="green_btn code_btn" type="button"
+                            href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_default" target="_blank">Try it
+                            Yourself <i class="fas fa-angle-double-right"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row light_grey_bg">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center left_container order-2">
+                    <h1>SQL</h1>
+                    <p>A language for accessing databases</p>
+                    <div class="button_container">
+                        <a href="https://www.w3schools.com/sql/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Learn Sql</a>
+                        <a href="https://www.w3schools.com/sql/sql_ref_keywords.asp" class="dark_grey_btn code_btn"
+                            type="button">Sql Reference</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 right_container">
+                    <div class="code_outer_container">
+                        <div class="code_container_heading">
+                            <h3>SQL Example:</h3>
+                        </div>
+                        <div class="code_inner_container sql_container">
+                            <code>
+                                SELECT * FROM Customers
+                                <br>
+                                WHERE Country='Mexico';
+                            </code>
+                        </div>
+                        <a class="green_btn code_btn" type="button"
+                            href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where"
+                            target="_blank">Try it Yourself <i class="fas fa-angle-double-right"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row dark_grey_bg">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 language_container">
+                    <div class="language_inner_container text-center">
+                        <h2>Python</h2>
+                        <div class="language">
+                            <h4>A programming language</h4>
+                        </div>
+                        <a href="https://www.w3schools.com/python/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Learn Python</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 language_container">
+                    <div class="language_inner_container text-center">
+                        <h2>PHP</h2>
+                        <div class="language">
+                            <h4>A web server programming language</h4>
+                        </div>
+                        <a href="https://www.w3schools.com/php/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Learn Php</a>`
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 language_container">
+                    <div class="language_inner_container text-center">
+                        <h2>JQuery</h2>
+                        <div class="language">
+                            <h4>A JavaScript library for developing web pages</h4>
+                        </div>
+                        <a href="https://www.w3schools.com/jquery/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Learn Jquery</a>`
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 language_container">
+                    <div class="language_inner_container text-center">
+                        <h2>Java</h2>
+                        <div class="language">
+                            <h4>A programming language</h4>
+                        </div>
+                        <a href="https://www.w3schools.com/java/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Learn Java</a>`
+                    </div>
+                </div>
+            </div>
+            <div class="row color_picker">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 color_picker_container">
+                    <div class="color_picker_inner_container text-center">
+                        <h2>W3.CSS</h2>
+                        <div class="color_para_container">
+                            <h4>A modern CSS framework for faster and better responsive web pages</h4>
+                        </div>
+                        <a href="https://www.w3schools.com/w3css/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Learn W3.CSS</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 color_picker_container">
+                    <div class="color_picker_inner_container text-center">
+                        <h2>Color Picker</h2>
+                        <div class="color_para_container">
+                            <a href="https://www.w3schools.com/colors/colors_picker.asp">
+                                <img src="./images/colorpicker.png" alt="Color Picker" class="color_picker_img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 color_picker_container">
+                    <div class="color_picker_inner_container text-center">
+                        <h2>Bootstrap</h2>
+                        <div class="color_para_container">
+                            <h4>A CSS framework for designing better web pages</h4>
+                        </div>
+                        <a href="https://www.w3schools.com/bootstrap/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Learn bootstrap 3</a>
+                        <br id="seperator_Bootstrap_btn">
+                        <a href="https://www.w3schools.com/bootstrap4/default.asp" class="dark_grey_btn code_btn"
+                            type="button">Learn bootstrap 4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dark_grey_bg exercise_container">
+                <h2 class="text-center">Exercises</h2>
+                <h4 class="text-center">Test yourself with exercises</h4>
+                <div class="row exercise_row">
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 exercise_btn">
+                        <a class="green_btn code_btn text-center" type="button"
+                            href="https://www.w3schools.com/html/html_exercises.asp">HTML Exercises</a>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 exercise_btn">
+                        <a class="green_btn code_btn text-center" type="button"
+                            href="https://www.w3schools.com/css/css_exercises.asp">CSS Exercises</a>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 exercise_btn">
+                        <a class="green_btn code_btn text-center" type="button"
+                            href="https://www.w3schools.com/js/js_exercises.asp">JavaScript Exercises</a>
+                    </div>
+                </div>
+                <div class="exercise_row exercise_row2">
+                    <div class="row2_div">
+                        <a class="green_btn code_btn exercise_row2_btn text-center" type="button"
+                            href="https://www.w3schools.com/sql/sql_exercises.asp">SQL</a>
+                    </div>
+                    <div class="row2_div">
+                        <a class="green_btn code_btn exercise_row2_btn text-center" type="button"
+                            href="https://www.w3schools.com/python/python_exercises.asp">Python</a>
+                    </div>
+                    <div class="row2_div">
+                        <a class="green_btn code_btn exercise_row2_btn text-center" type="button"
+                            href="https://www.w3schools.com/php/php_exercises.asp">PHP</a>
+                    </div>
+                    <div class="row2_div">
+                        <a class="green_btn code_btn exercise_row2_btn text-center" type="button"
+                            href="https://www.w3schools.com/jquery/jquery_exercises.asp">JQuery</a>
+                    </div>
+                    <div class="row2_div">
+                        <a class="green_btn code_btn exercise_row2_btn text-center" type="button"
+                            href="https://www.w3schools.com/java/java_exercises.asp">Java</a>
+                    </div>
+                    <div class="row2_div">
+                        <a class="green_btn code_btn exercise_row2_btn text-center hide_992" type="button"
+                            href="https://www.w3schools.com/cpp/cpp_exercises.asp">C++</a>
+                    </div>
+                    <div class="row2_div">
+                        <a class="green_btn code_btn exercise_row2_btn text-center hide_992" type="button"
+                            href="https://www.w3schools.com/cpp/cpp_exercises.asp">C#</a>
+                    </div>
+                </div>
+            </div>
+            <div class="light_grey_bg text-center templates_container">
+                <h2>Web Templates</h2>
+                <h4>Browse our selection of <b>free</b> responsive HTML Templates</h4>
+                <div class="template_img">
+                    <a href="https://www.w3schools.com/w3css/w3css_templates.asp">
+                        <img src="./images/w3css_templates.jpg" alt="w3css templates">
+                    </a>
+                </div>
+                <div class="template_btn_container">
+                    <a href="https://www.w3schools.com/w3css/default.asp" class="dark_grey_btn code_btn template_btn"
+                        type="button">Browse Templates</a>
+                </div>
+            </div>
+            <div class="text-center howto_container">
+                <h2>How To Section</h2>
+                <h4>Code snippets for HTML, CSS and JavaScript</h4>
+                <div class="row text-center containers_howto">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 howto_container">
+                        <a href="https://www.w3schools.com/howto/tryhow_css_sidenav_ifr.htm">
+                            <div class="sidebar_howto">
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 howto_container">
+                        <a href="https://www.w3schools.com/howto/tryhow_css_sidenav_ifr2.htm">
+                            <div class="sidebar_howto">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="template_btn_container">
+                    <a href="https://www.w3schools.com/howto/default.asp" class="dark_grey_btn code_btn template_btn"
+                        type="button">Learn How To</a>
+                </div>
+            </div>
+
+            <!-- web certificates section starting -->
+            <div class="row web_certificate_container text-center">
+                <a href="https://www.w3schools.com/cert/default.asp">
+                    <img src="./images/getcertified.jpg" class="certificate_img" alt="getcertified">
+                    <div class="certificate_overlay_container">
+                        <h2>Web Certificates</h2>
+                        <h3>Get Certifide in HTML, CSS and JavaScript</h3>
+                    </div>
+                    <a class="green_btn code_btn certificate_btn" type="button"
+                        href="https://www.w3schools.com/cert/default.asp">
+                        Try it Yourself <i class="fas fa-angle-double-right"></i></a>
+                </a>
+            </div>
+
+            <!-- https://www.w3schools.com/cert/default.asp -->
+            <!-- web certificates section ending -->
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html
